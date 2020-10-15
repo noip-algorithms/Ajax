@@ -1,5 +1,5 @@
 ---
-title: Ajax基本技术原理案例分析之一
+title: Ajax异步请求案例
 date: 2020-10-12
 categories: Javascript
 ---
