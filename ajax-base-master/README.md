@@ -1,7 +1,7 @@
 ---
-title: Ajax异步请求案例
+title: Ajax异步请求案例： 
 date: 2020-10-12
-categories: Javascript
+categories: JavaScript
 ---
 
 #### 1. 项目说明
@@ -149,8 +149,6 @@ categories: Javascript
      }
      ```
 
-     
-
    - 创建静态文件： `js/index.js`
 
    - Ajax 请求数据的四个步骤
@@ -158,54 +156,46 @@ categories: Javascript
      1. 对象创建
 
         ```js
-        let xml;
+     let xml;
         if(XMLHttpRequest) {
           xml = new XMLHttpRequest()
         }else{
           xml = new ActiveXObject('Mircrosoft.XMLHTTP')
         }
         ```
-
-        
-
+   
      2. 设置请求方式
 
         ```js
-        xml.open("GET",url,true)
+   xml.open("GET",url,true)
         ```
-
-        
-
+  
      3. 调用回调函数
-
+   
         ```js
-        xml.onreadystatechange = function(){
+   xml.onreadystatechange = function(){
           if(xml.readyState == 4 && xml.status == 200){}
-        }
+   }
         ```
-
-        
-
+  
      4. 发送请求
-
+     
         ```js
-        xml.send(null)
+      xml.send(null)
         ```
-
-        
 
    - `index.js`
 
      ```js
-     // 5. 设置访问路由
+  // 5. 设置访问路由
      const url = "http://localhost:3000/get"
      
      // 6. 获取元素
-     const img = document.querySelector('img')
+  const img = document.querySelector('img')
      const btn = document.querySelector('button')
-     
+  
      // 7. 事件监听
-     btn.addEventListener("click",function(){
+  btn.addEventListener("click",function(){
      
        // 1. 创建代理对象
        let xml;
@@ -228,13 +218,19 @@ categories: Javascript
        }
      })
      ```
-
+   
      
-
+   
    - 浏览器`url`： `http://localhost:3000`
    - 点击按钮，更换图片
    - 观察`url`并没有改变；
 
+#### 3.  参考文档
+
 1. 关于Ajax基本原理的`TypeScript`版本介绍
 
    [参考文档](https://yuanmin650304.github.io/2020/10/15/JavaScript/JS/Ajax-base-for-Typescript/)
+
+2. Ajax异步请求案例： `JSON.parse()`解析
+
+   [参考文档]()
