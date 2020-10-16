@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- <div class="card">
+    <h2>Hello World!</h2>
+    <img src="imgs/photo.jpg" alt="photo">
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis amet consequatur eligendi, autem molestias nostrum ratione animi temporibus beatae quo expedita accusamus delectus sapiente distinctio! Quibusdam cumque numquam unde dolorem.</li>
+      <li><button></button></li>
+    </ul>
+  </div> -->
+  
+  <script>
+  // 设置路由
+  const url = "localhost:3000"
+  //  1. 创建ajax对象
+  let xml = new XMLHttpRequest()
+
+  // 2. 设置发送方式: 默认方式(Async)： true
+  xml.open("GET",url,true)
+
+  // 4. 获取从服务端响应数据
+  xml.onreadystatechange = function(){
+    if(xml.onreadystatechange == 4 && xml.status == 200) {
+      console.log(xml.responseText)
+    }
+  }
+
+  // 3. 发送请求
+  xml.send(null)
+
+  </script>
+</body>
+</html>

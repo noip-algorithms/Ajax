@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  .center;
+  .card{
+    width: 280px;
+    padding: 15px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,.5);
+    h2 {
+      text-align: center;
+      line-height: 60px;
+    }
+    img {
+      width: 100%;
+    }
+    ul {
+      padding: 20px 0;
+      li {
+        line-height: 20px; 
+        &:nth-of-type(2) {
+          float: right;
+          margin: 10px auto 0;
+        }     
+      }
+    }
+  }
+}
